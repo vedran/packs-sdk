@@ -28,6 +28,13 @@ describe('Marshaling', () => {
     assert.deepEqual(transform(Infinity), Infinity);
     assert.deepEqual(transform(new Date(123)), new Date(123));
 
+    // Simulate a fetch response with isBinaryResponse set to true.
+    const httpResponse = {
+      status: 1234,
+      body: Buffer.from(Uint8Array.from([1, 2, 3, 4, 5])),
+    };
+    assert.deepEqual(transform(httpResponse), httpResponse);
+
     // the following doesn't work yet.
     // assert.deepEqual(transform(/123/), /123/);
     // assert.deepEqual(transform(Uint8Array.from([1, 2, 3])), Uint8Array.from([1, 2, 3]));
@@ -98,6 +105,11 @@ describe('Marshaling', () => {
     const buffer = Buffer.from('some testing data');
     assert.isTrue(buffer.equals(transform(buffer)));
     assert.isTrue(Buffer.isBuffer(transform(buffer)));
+  });
+
+  it('does not use excessive memory encoding a buffer', () => {
+    const buffer = Buffer.alloc(1024 * 1024 * 10);
+    assert.operator(marshalValue(buffer)?.length, '<', (buffer.length * 4.0) / 3 + 100);
   });
 
   it('toJSON override does not apply if not marshaling', () => {
