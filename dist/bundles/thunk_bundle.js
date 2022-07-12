@@ -4809,7 +4809,7 @@ module.exports = (() => {
     var _a;
     if (val instanceof Buffer2 || ((_a = global.Buffer) == null ? void 0 : _a.isBuffer(val))) {
       return {
-        data: [...Uint8Array.from(val)],
+        data: Buffer2.from(Uint8Array.from(val)).toString("base64"),
         ["__coda_marshaler__" /* CodaMarshaler */]: "Buffer" /* Buffer */
       };
     }
@@ -4818,7 +4818,7 @@ module.exports = (() => {
     if (typeof val !== "object" || val["__coda_marshaler__" /* CodaMarshaler */] !== "Buffer" /* Buffer */) {
       return;
     }
-    return Buffer2.from(val.data);
+    return Buffer2.from(val.data, "base64");
   }
 
   // runtime/common/marshaling/marshal_dates.ts

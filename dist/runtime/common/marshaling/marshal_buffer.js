@@ -11,7 +11,7 @@ function marshalBuffer(val) {
     // `Buffer?.isBuffer` (which checks `val._isBuffer`) would allow us to bridge the gap.
     if (val instanceof Buffer || ((_a = global.Buffer) === null || _a === void 0 ? void 0 : _a.isBuffer(val))) {
         return {
-            data: [...Uint8Array.from(val)],
+            data: Buffer.from(Uint8Array.from(val)).toString('base64'),
             [constants_2.MarshalingInjectedKeys.CodaMarshaler]: constants_1.CodaMarshalerType.Buffer,
         };
     }
@@ -21,6 +21,6 @@ function unmarshalBuffer(val) {
     if (typeof val !== 'object' || val[constants_2.MarshalingInjectedKeys.CodaMarshaler] !== constants_1.CodaMarshalerType.Buffer) {
         return;
     }
-    return Buffer.from(val.data);
+    return Buffer.from(val.data, 'base64');
 }
 exports.unmarshalBuffer = unmarshalBuffer;
