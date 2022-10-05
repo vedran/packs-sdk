@@ -15,8 +15,6 @@ const CodeEnd = '// END\n';
 const BaseDir = path.join(__dirname, '../../');
 const DocumentationRoot = path.join(BaseDir, 'documentation');
 const TypeDocsRoot = path.join(BaseDir, 'docs');
-const EmbeddedSnippetsRoot = path.join(TypeDocsRoot, 'embedded-snippets');
-const SnippetEmbedTemplate = fs.readFileSync(path.join(DocumentationRoot, 'snippet_embed_template.html'), 'utf8');
 const ExampleDirName = 'samples';
 const ExamplePagesRoot = path.join(TypeDocsRoot, ExampleDirName);
 const ExamplePageTemplate = Handlebars.compile(
@@ -35,7 +33,6 @@ function main() {
 function compileAutocompleteSnippets() {
   const compiledSnippets: CompiledAutocompleteSnippet[] = Snippets.map(snippet => {
     const code = getCodeFile(snippet.codeFile, true);
-    compileSnippetEmbed(snippet.codeFile);
     return {
       triggerTokens: snippet.triggerTokens,
       content: snippet.content,
@@ -103,27 +100,12 @@ function getContentFile(file: string) {
 
 function compileExampleSnippets(example: Example): CompiledExampleSnippet[] {
   return example.exampleSnippets.map(exampleSnippet => {
-    compileSnippetEmbed(exampleSnippet.codeFile);
     return {
       name: exampleSnippet.name,
       content: exampleSnippet.content,
       code: getCodeFile(exampleSnippet.codeFile),
     };
   });
-}
-
-function compileSnippetEmbed(codeFile: string) {
-  // TODO: Escape the html. codeString is inserted into a JS script.
-  const codeString = JSON.stringify(getCodeFile(codeFile));
-  const exampleSnippetEmbed = SnippetEmbedTemplate.replace(/'{{CODE}}'/, codeString);
-  const snippetDirPath = path.join(EmbeddedSnippetsRoot, path.dirname(codeFile));
-  const snippetFileName = path.basename(codeFile).split('.')[0];
-
-  if (!fs.existsSync(snippetDirPath)) {
-    fs.mkdirSync(snippetDirPath, {recursive: true});
-  }
-
-  fs.writeFileSync(path.join(snippetDirPath, `${snippetFileName}.html`), exampleSnippetEmbed);
 }
 
 function compileExamplePage(example: Example, compiledExample: CompiledExample) {
