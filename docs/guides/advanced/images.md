@@ -1,6 +1,8 @@
 ---
 nav: Images & files
 description: Use images and files as parameters and return types.
+tags:
+  - Images
 ---
 
 # Working with images and files

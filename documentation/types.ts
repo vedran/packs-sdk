@@ -28,6 +28,7 @@ export interface Example {
   description: string;
   icon?: string;
   category: ExampleCategory;
+  tags?: string[];
   triggerTokens: string[];
   linkData: LinkData;
   contentFile: string;
@@ -39,6 +40,7 @@ export interface CompiledExample {
   description: string;
   icon?: string;
   category: ExampleCategory;
+  tags?: string[];
   triggerTokens: string[];
   exampleFooterLink: string;
   learnMoreLink?: string;

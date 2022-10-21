@@ -1,6 +1,8 @@
 ---
 nav: Data types
 description: Use semantic types to accurately represent data in the document.
+tags:
+  - Data types
 ---
 
 # Return data with meaningful types

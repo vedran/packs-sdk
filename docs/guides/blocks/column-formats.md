@@ -1,6 +1,8 @@
 ---
 nav: Column formats
 description: Automatically apply a formula to a user's input to display it in a different format.
+tags:
+  - Column formats
 ---
 
 # Add custom column formats

@@ -1,6 +1,8 @@
 ---
 nav: Parameters
 description: Define parameters on formulas and sync tables to accept values from the user.
+tags:
+  - Parameters
 ---
 
 # Accept input with parameters
@@ -314,7 +316,7 @@ There are some important differences between vararg parameters and standard para
 - You can have more than one, but if so the user is required to enter complete sets of values. For example, if you have two vararg parameters `a` and `b`, the user can't provide a value for `a` without also providing a value for `b`. These pairs of parameters can then be repeated multiple times: `Foo("a1", "b1", "a2", "b2")`.
 
 ??? info "Partially supported in actions builder or sync table settings"
-    
+
     While vararg parameters always work in the formula editor, they are only partially supported in the builder UIs. A single vararg parameter will be shown as if it was a single array parameter, and a pair of vararg parameters will be shown with a nice UI similar to that used by built-in actions. Three or more vararg parameters won’t show up in the builder UIs at all, and the user will need to visit the formula editor to set their values. <!-- go/bug/20828 -->
 
 ??? example "Example: Step diagram formula"

@@ -1,6 +1,8 @@
 ---
 nav: Actions
 description: Use actions to create, update, or delete records in APIs and external data sources.
+tags:
+  - Actions
 ---
 
 # Add custom actions for buttons and automations

@@ -2,8 +2,10 @@
 nav: Sync table
 description: Learn how to build a sync table of external data.
 icon: material/table-sync
+tags:
+  - Sync tables
 hide:
-- toc
+  - toc
 ---
 
 # Learn to build a sync table

@@ -2,6 +2,7 @@
 nav: Dates and times
 description: Samples that show how to work with dates and times.
 icon: material/calendar-clock
+tags: ["Dates and times"]
 ---
 
 # Dates and time samples

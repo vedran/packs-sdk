@@ -2,6 +2,7 @@
 nav: Autocomplete
 description: Samples that show how to provide autocomplete options for a parameter.
 icon: material/form-dropdown
+tags: ["Autocomplete"]
 ---
 
 # Autocomplete samples

@@ -2,8 +2,10 @@
 nav: Using OAuth2
 description: Learn how to access private data in an API using OAuth2.
 icon: material/shield-key
+tags:
+  - OAuth
 hide:
-- toc
+  - toc
 ---
 
 # Learn to authenticate with an API using OAuth2

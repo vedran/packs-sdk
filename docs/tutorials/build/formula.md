@@ -2,8 +2,10 @@
 nav: Basic formula
 description: Learn how to build a basic formula from scratch.
 icon: material/function
+tags:
+  - Formulas
 hide:
-- toc
+  - toc
 ---
 
 # Learn to build a formula

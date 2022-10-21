@@ -83,6 +83,8 @@ plugins:
         cards_color:
           fill: "#006838"  # Emerald
           text: "#FFFFFF"
+    - tags:
+        tags_file: tags.md
 
 
 extra:

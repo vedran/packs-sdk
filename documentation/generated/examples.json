@@ -4,6 +4,9 @@
     "description": "Samples that show how to create a column format.",
     "icon": "material/table-column",
     "category": "Topic",
+    "tags": [
+      "Column formats"
+    ],
     "triggerTokens": [
       "addColumnFormat"
     ],
@@ -52,6 +55,9 @@
     "description": "Samples that show how to authenticate with an API.",
     "icon": "material/account-key",
     "category": "Topic",
+    "tags": [
+      "Authentication"
+    ],
     "triggerTokens": [
       "setSystemAuthentication",
       "setUserAuthentication"
@@ -121,6 +127,9 @@
     "description": "Samples that show how to create a dynamic sync table.",
     "icon": "material/cloud-sync-outline",
     "category": "Topic",
+    "tags": [
+      "Dynamic sync tables"
+    ],
     "triggerTokens": [
       "addDynamicSyncTable"
     ],
@@ -154,6 +163,9 @@
     "description": "Samples that show how to create a formula.",
     "icon": "material/function",
     "category": "Topic",
+    "tags": [
+      "Formulas"
+    ],
     "triggerTokens": [
       "addFormula"
     ],
@@ -192,6 +204,9 @@
     "description": "Samples that show how to create an action formula, for use in a button or automation.",
     "icon": "material/cursor-default-click-outline",
     "category": "Topic",
+    "tags": [
+      "Actions"
+    ],
     "triggerTokens": [
       "isAction"
     ],
@@ -230,6 +245,9 @@
     "description": "Samples that show how to accept parameters from the user.",
     "icon": "material/format-textbox",
     "category": "Topic",
+    "tags": [
+      "Parameters"
+    ],
     "triggerTokens": [
       "makeParameter"
     ],
@@ -308,6 +326,9 @@
     "description": "Samples that show how to provide autocomplete options for a parameter.",
     "icon": "material/form-dropdown",
     "category": "Topic",
+    "tags": [
+      "Autocomplete"
+    ],
     "triggerTokens": [
       "autocomplete"
     ],
@@ -346,6 +367,9 @@
     "description": "Samples that show how to create a sync table.",
     "icon": "material/table-sync",
     "category": "Topic",
+    "tags": [
+      "Sync tables"
+    ],
     "triggerTokens": [
       "addSyncTable"
     ],
@@ -389,6 +413,9 @@
     "description": "Samples that show how to fetch data from an external source.",
     "icon": "fontawesome/solid/cloud-arrow-down",
     "category": "Topic",
+    "tags": [
+      "Fetcher"
+    ],
     "triggerTokens": [
       "fetch"
     ],
@@ -422,6 +449,9 @@
     "description": "Samples that show how to return values of various data types.",
     "icon": "material/order-alphabetical-ascending",
     "category": "Topic",
+    "tags": [
+      "Data types"
+    ],
     "triggerTokens": [
       "resultType",
       "type"
@@ -501,6 +531,9 @@
     "description": "Samples that show how to define a schema, to represent rich objects.",
     "icon": "material/format-list-group",
     "category": "Topic",
+    "tags": [
+      "Schemas"
+    ],
     "triggerTokens": [
       "makeSchema",
       "makeObjectSchema"
@@ -540,6 +573,9 @@
     "description": "Samples that show how to work with dates and times.",
     "icon": "material/calendar-clock",
     "category": "Topic",
+    "tags": [
+      "Dates and times"
+    ],
     "triggerTokens": [
       "Date",
       "Time",
@@ -585,6 +621,9 @@
     "description": "Samples that show how to work with images.",
     "icon": "material/image",
     "category": "Topic",
+    "tags": [
+      "Images"
+    ],
     "triggerTokens": [
       "ImageReference",
       "ImageAttachment",
@@ -646,6 +685,9 @@
     "description": "Samples that show how to configure a Pack to connect to various popular APIs.",
     "icon": "material/api",
     "category": "Topic",
+    "tags": [
+      "OAuth"
+    ],
     "triggerTokens": [],
     "linkData": {
       "type": "SamplePage"

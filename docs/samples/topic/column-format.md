@@ -2,6 +2,7 @@
 nav: Column formats
 description: Samples that show how to create a column format.
 icon: material/table-column
+tags: ["Column formats"]
 ---
 
 # Column format samples

@@ -2,6 +2,7 @@
 nav: Math
 description: A Pack that provides various math operations.
 icon: material/calculator-variant
+
 ---
 
 # Math sample

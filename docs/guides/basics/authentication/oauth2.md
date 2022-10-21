@@ -1,6 +1,8 @@
 ---
 nav: OAuth
 description: Configure authentication for an API that uses OAuth2.
+tags:
+  - OAuth
 ---
 
 # Authenticating using OAuth

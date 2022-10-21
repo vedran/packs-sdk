@@ -2,6 +2,7 @@
 nav: Authentication
 description: Samples that show how to authenticate with an API.
 icon: material/account-key
+tags: ["Authentication"]
 ---
 
 # Authentication samples

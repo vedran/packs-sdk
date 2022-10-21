@@ -2,6 +2,7 @@
 nav: API setup
 description: Samples that show how to configure a Pack to connect to various popular APIs.
 icon: material/api
+tags: ["OAuth"]
 ---
 
 # API setup samples

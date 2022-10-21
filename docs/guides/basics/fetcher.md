@@ -1,5 +1,7 @@
 ---
 description: Make HTTP requests to external APIs and services using the custom Fetcher interface.
+tags:
+  - Fetcher
 ---
 
 # Fetching remote data

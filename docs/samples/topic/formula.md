@@ -2,6 +2,7 @@
 nav: Formulas
 description: Samples that show how to create a formula.
 icon: material/function
+tags: ["Formulas"]
 ---
 
 # Formula samples

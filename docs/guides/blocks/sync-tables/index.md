@@ -1,6 +1,8 @@
 ---
 nav: Sync tables
 description: Create tables of data that automatically sync in records from an external data source.
+tags:
+  - Sync tables
 ---
 
 # Add sync tables

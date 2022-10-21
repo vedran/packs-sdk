@@ -1,6 +1,8 @@
 ---
 nav: Timezones
 description: Work with dates and times across the various timezone contexts in a Pack.
+tags:
+  - Dates and times
 ---
 
 # Timezones in Coda

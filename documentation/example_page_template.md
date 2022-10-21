@@ -2,6 +2,7 @@
 nav: {{name}}
 description: {{description}}
 {{#if icon}}icon: {{icon}}{{/if}}
+{{#if tags}}tags: {{{toJson tags}}}{{/if}}
 ---
 
 # {{pageTitle this}}

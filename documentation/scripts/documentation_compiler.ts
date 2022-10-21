@@ -71,6 +71,7 @@ function compileExamples() {
       description: example.description,
       icon: example.icon,
       category: example.category,
+      tags: example.tags,
       triggerTokens: example.triggerTokens,
       linkData: example.linkData,
       exampleFooterLink,
@@ -204,6 +205,10 @@ Handlebars.registerHelper('pageTitle', (example: CompiledExample) => {
     }
   }
   return `${name} ${suffix}`;
+});
+
+Handlebars.registerHelper('toJson', (input: any) => {
+  return JSON.stringify(input);
 });
 
 main();

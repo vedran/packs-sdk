@@ -2,6 +2,7 @@
 nav: Dungeons &amp; Dragons
 description: A Pack that uses an API to retrieve information about the game Dungeons &amp; Dragons.
 icon: fontawesome/solid/dragon
+
 ---
 
 # Dungeons &amp; Dragons sample

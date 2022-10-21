@@ -2,6 +2,7 @@
 nav: Data types
 description: Samples that show how to return values of various data types.
 icon: material/order-alphabetical-ascending
+tags: ["Data types"]
 ---
 
 # Data type samples

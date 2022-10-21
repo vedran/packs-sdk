@@ -172,6 +172,7 @@ export const Examples: Example[] = [
     description: 'Samples that show how to create a column format.',
     icon: 'material/table-column',
     category: ExampleCategory.Topic,
+    tags: ['Column formats'],
     triggerTokens: ['addColumnFormat'],
     contentFile: './samples/packs/column-format/README.md',
     linkData: {
@@ -220,6 +221,7 @@ export const Examples: Example[] = [
     description: 'Samples that show how to authenticate with an API.',
     icon: 'material/account-key',
     category: ExampleCategory.Topic,
+    tags: ['Authentication'],
     triggerTokens: ['setSystemAuthentication', 'setUserAuthentication'],
     contentFile: './samples/packs/authentication/README.md',
     linkData: {
@@ -290,6 +292,7 @@ export const Examples: Example[] = [
     description: 'Samples that show how to create a dynamic sync table.',
     icon: 'material/cloud-sync-outline',
     category: ExampleCategory.Topic,
+    tags: ['Dynamic sync tables'],
     triggerTokens: ['addDynamicSyncTable'],
     contentFile: './samples/packs/dynamic-sync-table/README.md',
     linkData: {
@@ -321,6 +324,7 @@ export const Examples: Example[] = [
     description: 'Samples that show how to create a formula.',
     icon: 'material/function',
     category: ExampleCategory.Topic,
+    tags: ['Formulas'],
     triggerTokens: ['addFormula'],
     contentFile: './samples/packs/formula/README.md',
     linkData: {
@@ -359,6 +363,7 @@ export const Examples: Example[] = [
     description: 'Samples that show how to create an action formula, for use in a button or automation.',
     icon: 'material/cursor-default-click-outline',
     category: ExampleCategory.Topic,
+    tags: ['Actions'],
     triggerTokens: ['isAction'],
     contentFile: './samples/packs/action/README.md',
     linkData: {
@@ -395,6 +400,7 @@ export const Examples: Example[] = [
     description: 'Samples that show how to accept parameters from the user.',
     icon: 'material/format-textbox',
     category: ExampleCategory.Topic,
+    tags: ['Parameters'],
     triggerTokens: ['makeParameter'],
     contentFile: './samples/packs/parameter/README.md',
     linkData: {
@@ -477,6 +483,7 @@ export const Examples: Example[] = [
     description: 'Samples that show how to provide autocomplete options for a parameter.',
     icon: 'material/form-dropdown',
     category: ExampleCategory.Topic,
+    tags: ['Autocomplete'],
     triggerTokens: ['autocomplete'],
     contentFile: './samples/packs/autocomplete/README.md',
     linkData: {
@@ -515,6 +522,7 @@ export const Examples: Example[] = [
     description: 'Samples that show how to create a sync table.',
     icon: 'material/table-sync',
     category: ExampleCategory.Topic,
+    tags: ['Sync tables'],
     triggerTokens: ['addSyncTable'],
     contentFile: './samples/packs/sync-table/README.md',
     linkData: {
@@ -557,6 +565,7 @@ export const Examples: Example[] = [
     description: 'Samples that show how to fetch data from an external source.',
     icon: 'fontawesome/solid/cloud-arrow-down',
     category: ExampleCategory.Topic,
+    tags: ['Fetcher'],
     triggerTokens: ['fetch'],
     contentFile: './samples/packs/fetcher/README.md',
     linkData: {
@@ -586,6 +595,7 @@ export const Examples: Example[] = [
     description: 'Samples that show how to return values of various data types.',
     icon: 'material/order-alphabetical-ascending',
     category: ExampleCategory.Topic,
+    tags: ['Data types'],
     triggerTokens: ['resultType', 'type'],
     contentFile: './samples/packs/data-type/README.md',
     linkData: {
@@ -666,6 +676,7 @@ export const Examples: Example[] = [
     description: 'Samples that show how to define a schema, to represent rich objects.',
     icon: 'material/format-list-group',
     category: ExampleCategory.Topic,
+    tags: ['Schemas'],
     triggerTokens: ['makeSchema', 'makeObjectSchema'],
     contentFile: './samples/packs/schema/README.md',
     linkData: {
@@ -703,6 +714,7 @@ export const Examples: Example[] = [
     description: 'Samples that show how to work with dates and times.',
     icon: 'material/calendar-clock',
     category: ExampleCategory.Topic,
+    tags: ['Dates and times'],
     triggerTokens: ['Date', 'Time', 'DateTime'],
     contentFile: './samples/packs/dates/README.md',
     linkData: {
@@ -746,6 +758,7 @@ export const Examples: Example[] = [
     description: 'Samples that show how to work with images.',
     icon: 'material/image',
     category: ExampleCategory.Topic,
+    tags: ['Images'],
     triggerTokens: ['ImageReference', 'ImageAttachment', 'Image', 'ImageArray'],
     contentFile: './samples/packs/image/README.md',
     linkData: {
@@ -806,6 +819,7 @@ export const Examples: Example[] = [
     description: 'Samples that show how to configure a Pack to connect to various popular APIs.',
     icon: 'material/api',
     category: ExampleCategory.Topic,
+    tags: ['OAuth'],
     triggerTokens: [],
     contentFile: './samples/packs/apis/README.md',
     linkData: {

@@ -2,6 +2,7 @@
 nav: Sync tables
 description: Samples that show how to create a sync table.
 icon: material/table-sync
+tags: ["Sync tables"]
 ---
 
 # Sync table samples

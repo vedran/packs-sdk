@@ -1,6 +1,8 @@
 ---
 nav: Autocomplete
 description: Simplify entering parameters by providing choices users can select from.
+tags:
+  - Autocomplete
 ---
 
 # Autocomplete parameter options
@@ -121,7 +123,7 @@ coda.makeParameter({
 
 !!! warning "Manual refresh required for `StringArray` parameters"
     When using `StringArray` parameters in the builder UIs, the autocomplete values are only fetched once when the parameter UI is loaded. The autocomplete options can be manually refreshed by the user with a menu item, but this limitation doesn't make them a great fit for use cases where the options depend on the values of previous parameters. <!-- o/bug/25402 -->
-    
+
     <img src="../../../../images/autocomplete_list_refresh.png" srcset="../../../../images/autocomplete_list_refresh_2x.png 2x" class="screenshot" alt="Autocomplete of list parameters requires manual refresh">
 
 !!! bug "Previous vararg values not available"
