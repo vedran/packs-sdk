@@ -224,8 +224,8 @@ export const pack = coda.newPack();
 // Add a column format that displays a task URL as rich metadata.
 pack.addColumnFormat({
   name: "Task",
-  // The formula "GetTask" below will get run on the cell value.
-  formulaName: "GetTask",
+  // The formula "Task" below will get run on the cell value.
+  formulaName: "Task",
   // If the first values entered into a new column match these patterns then
   // this column format will be automatically applied.
   matchers: TaskUrlPatterns,
@@ -262,7 +262,7 @@ const TaskSchema = coda.makeObjectSchema({
 // by the "Task" column format above, but is also a regular formula that can be
 // used elsewhere.
 pack.addFormula({
-  name: "GetTask",
+  name: "Task",
   description: "Gets a Todoist task by URL",
   parameters: [
     coda.makeParameter({
