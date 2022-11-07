@@ -42,6 +42,30 @@ pack.setUserAuthentication({
 
 // Schemas
 
+// Schema that captures information about when a task is due. Used by 
+// TaskSchema.
+const DueSchema = coda.makeObjectSchema({
+  properties: {
+    date: {
+      description: "The date the task is due.",
+      type: coda.ValueType.String,
+      codaType: coda.ValueHintType.Date,
+    },
+    time: {
+      description: "The specific moment the task is due.",
+      type: coda.ValueType.String,
+      codaType: coda.ValueHintType.DateTime,
+      fromKey: "datetime",
+    },
+    display: {
+      description: "The display value for the due date.",
+      type: coda.ValueType.String,
+      fromKey: "string",
+    },
+  },
+  displayProperty: "display",
+});
+
 // A reference to a synced Project. Usually you can use
 // `coda.makeReferenceSchemaFromObjectSchema` to generate these from the primary
 // schema, but that doesn't work in this case since a Project itself can contain
@@ -95,8 +119,15 @@ const ProjectSchema = coda.makeObjectSchema({
     parentProject: ProjectReferenceSchema,
   },
   displayProperty: "name",
+  // Sync table metadata.
   idProperty: "projectId",
   featuredProperties: ["url"],
+  // Card metadata.
+  linkProperty: "url",
+  subtitleProperties: ["shared", "favorite"],
+  identity: {
+    name: "Project",
+  },
 });
 
 // A reference to a synced Task. Usually you can use
@@ -128,11 +159,16 @@ const TaskSchema = coda.makeObjectSchema({
     description: {
       description: "A detailed description of the task.",
       type: coda.ValueType.String,
+      codaType: coda.ValueHintType.Markdown,
     },
     url: {
       description: "A link to the task in the Todoist app.",
       type: coda.ValueType.String,
       codaType: coda.ValueHintType.Url,
+    },
+    completed: {
+      description: "If the task has been completed.",
+      type: coda.ValueType.Boolean,
     },
     order: {
       description: "The position of the task in the project or parent task.",
@@ -141,6 +177,10 @@ const TaskSchema = coda.makeObjectSchema({
     priority: {
       description: "The priority of the task.",
       type: coda.ValueType.String,
+    },
+    due: {
+      description: "When the task is due.",
+      ...DueSchema,
     },
     taskId: {
       description: "The ID of the task.",
@@ -165,6 +205,12 @@ const TaskSchema = coda.makeObjectSchema({
   displayProperty: "name",
   idProperty: "taskId",
   featuredProperties: ["project", "url"],
+  linkProperty: "url",
+  snippetProperty: "description",
+  subtitleProperties: ["priority", "completed", "due"],
+  identity: {
+    name: "Task",
+  },
 });
 
 /**
@@ -196,8 +242,10 @@ function toTask(task: any, withReferences = false) {
     name: task.content,
     description: task.description,
     url: task.url,
+    completed: task.is_completed,
     order: task.order,
     priority: task.priority,
+    due: task.due,
     taskId: task.id,
     projectId: task.project_id,
     parentTaskId: task.parent_id,
@@ -222,7 +270,7 @@ function toTask(task: any, withReferences = false) {
 // Formulas (read-only).
 
 pack.addFormula({
-  name: "GetProject",
+  name: "Project",
   description: "Gets a Todoist project by URL",
   parameters: [
     coda.makeParameter({
@@ -245,7 +293,7 @@ pack.addFormula({
 });
 
 pack.addFormula({
-  name: "GetTask",
+  name: "Task",
   description: "Gets a Todoist task by URL",
   parameters: [
     coda.makeParameter({
@@ -271,13 +319,13 @@ pack.addFormula({
 
 pack.addColumnFormat({
   name: "Project",
-  formulaName: "GetProject",
+  formulaName: "Project",
   matchers: ProjectUrlPatterns,
 });
 
 pack.addColumnFormat({
   name: "Task",
-  formulaName: "GetTask",
+  formulaName: "Task",
   matchers: TaskUrlPatterns,
 });
 

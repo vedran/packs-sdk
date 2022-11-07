@@ -30,7 +30,7 @@ const TaskSchema = coda.makeObjectSchema({
 
 // Formula that looks up rich metadata about a task given it's URL.
 pack.addFormula({
-  name: "GetTaskById",
+  name: "Task",
   description: "Gets a Todoist task by ID",
   parameters: [
     coda.makeParameter({
